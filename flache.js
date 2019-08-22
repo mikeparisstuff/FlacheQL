@@ -205,7 +205,7 @@ export default class Flache {
   }
 
   fetchData(query, variables) {
-    return this.fetch(query, variables).then(res => {
+    return this.fetcher(query, variables).then(res => {
       this.cache[query] = res;
       let normalizedData = flatten(res);
         this.fieldsCache.push({
