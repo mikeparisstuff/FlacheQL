@@ -197,11 +197,10 @@ export default class Flache {
           return resolve(this.cache[query]);
         });
       } else {
-        this.fetch()
         return this.fetchData(query, variables);
       }
     }
-    return this.fetcher(query, variables);
+    return this.fetchData(query, variables);
   }
 
   fetchData(query, variables) {
