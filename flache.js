@@ -48,6 +48,7 @@ export default class Flache {
 
     // if an identical query comes in return the cached result
     if (this.cache[query]) {
+      console.log(`Flacheql hit on key: ${query}`);
       return new Promise(resolve => {
         resolve(this.cache[query]);
       });
